@@ -14,11 +14,14 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
 Route::get('/login', [UserController::class, 'login']);
 Route::get('/register', [UserController::class, 'register']);
-Route::post('/attendance', [UserController::class, 'newUser']);
-Route::post('/attendance', [UserController::class, 'loginUser']);
+route::get('/attendance', [UserController::class, 'attendance']);
 
+Route::post('/register', [UserController::class, 'newUser']); //新規登録
+Route::post('/login', [UserController::class, 'loginUser']); //ログイン
 
+//管理画面
 Route::get('/admin/login', [UserController::class, 'adminLogin']);
 Route::post('/admin/attendance/list', [UserController::class, 'adminUser']);

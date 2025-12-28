@@ -16,16 +16,24 @@ class UserController extends Controller
     public function loginUser(UserRequest $request){
         //dd('attendance');
         $loginUser = $request->only(['email', 'password']);
-        return redirect('attendance');
+        return redirect('/attendance');
     }
 
     public function register(){
         return view('register');
     }
 
-    public function newUser(UserRequest $request){
-        $users = $request->only(['name', 'email', 'password']);
-        User::create($users);
+    public function newUser(Request $request){
+        $user=Users::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>$request->password
+        ]);
+        //User::create($users);
+        return redirect('attendance');
+    }
+
+    public function attendance(){
         return view('attendance');
     }
 
