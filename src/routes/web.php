@@ -16,12 +16,18 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/login', [UserController::class, 'login']);
-Route::get('/register', [UserController::class, 'register']);
-route::get('/attendance', [UserController::class, 'attendance']);
-
-Route::post('/register', [UserController::class, 'newUser']); //新規登録
 Route::post('/login', [UserController::class, 'loginUser']); //ログイン
+
+Route::get('/register', [UserController::class, 'register']);
+Route::post('/register', [UserController::class, 'newUser']); //新規登録
+
+Route::middleware('auth')->group(function () {
+    Route::get('/attendance', [UserController::class, 'attendance']);
+});//ログインしていない時リダイレクト
 
 //管理画面
 Route::get('/admin/login', [UserController::class, 'adminLogin']);
-Route::post('/admin/attendance/list', [UserController::class, 'adminUser']);
+Route::post('/admin/login', [UserController::class, 'adminUser']); // ログイン処理
+Route::get('/admin/attendance/list', [UserController::class, 'adminList']); // ログイン後画面
+
+

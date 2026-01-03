@@ -16,7 +16,7 @@
     <main class="contact-form__content contact-form__heading">
         <h2>会員登録</h2>
 
-        <form class="form" action="/attendance" method="post">
+        <form class="form" action="/register" method="post">
             @csrf
             <div>
                 <div>ユーザ名</div>

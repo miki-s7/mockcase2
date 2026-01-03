@@ -16,7 +16,7 @@
     <main>
         <h2>ログイン</h2>
 
-        <form class="form" action="/attendance" method="post">
+        <form class="form" action="/login" method="post">
             @csrf
             <div>
                 <div>メールアドレス</div>
