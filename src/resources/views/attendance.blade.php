@@ -8,7 +8,14 @@
 </head>
 <body>
     <main>
-        OK
+        <p>勤務時間外</p>
+        <p>日付</p>
+        <p>時間</p>
+        <form action="/attendance/clock-in" method="post">
+            @csrf
+            <button type="submit">出勤</button>
+        </form>
+
     </main>
 </body>
 </html>

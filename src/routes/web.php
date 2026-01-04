@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AttendanceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,7 @@ Route::get('/admin/login', [UserController::class, 'adminLogin']);
 Route::post('/admin/login', [UserController::class, 'adminUser']); // ログイン処理
 Route::get('/admin/attendance/list', [UserController::class, 'adminList']); // ログイン後画面
 
+
+//打刻
+Route::post('/attendance/clock-in', [AttendanceController::class, 'clockIn']);
 

@@ -5,7 +5,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/register.css') }}" />
-    <title>会員登録画面</title>
+    <title>新規会員登録</title>
 </head>
 <body>
     <header class="header header__inner header__logo">
@@ -58,7 +58,7 @@
                 <button class="form__button-submit" type="submit">登録する</button>
             </div>
         </form>
-        <a href="">ログインはこちら</a>
+        <a href="/login">ログインはこちら</a>
     </main>
 </body>
 </html>
