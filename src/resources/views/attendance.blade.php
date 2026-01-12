@@ -11,9 +11,13 @@
         <p>勤務時間外</p>
         <p>日付</p>
         <p>時間</p>
-        <form action="/attendance/clock-in" method="post">
+        <form action="/attendance" method="post">
             @csrf
             <button type="submit">出勤</button>
+        </form>
+        <form action="/attendance" method="post">
+            @csrf
+            <button type="submit">退勤</button>
         </form>
 
     </main>

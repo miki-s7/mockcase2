@@ -33,5 +33,6 @@ Route::get('/admin/attendance/list', [UserController::class, 'adminList']); // �
 
 
 //打刻
-Route::post('/attendance/clock-in', [AttendanceController::class, 'clockIn']);
-
+Route::post('/attendance', [AttendanceController::class, 'clockIn']);
+Route::post('/attendance', [AttendanceController::class, 'clockOut']);
+Route::get('/attendance/list', [AttendanceController::class, 'userList']);

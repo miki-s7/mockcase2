@@ -16,7 +16,6 @@ class Attendance extends Model
     'clock_out',
     'break_1',
     'break_2',
-    'status',
     'note',
 ];
 }
