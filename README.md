@@ -52,3 +52,4 @@ DB_PASSWORD=laravel_pass
 ## ER 図
 
 ![image]
+<img width="574" height="430" alt="Image" src="https://github.com/user-attachments/assets/dbae3aa9-88ef-4744-b278-197030fa4c52" />
