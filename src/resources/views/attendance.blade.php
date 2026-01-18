@@ -9,9 +9,9 @@
 <body>
     <main>
         <p>勤務時間外</p>
-        <p>日付</p>
-        <p>時間</p>
-        <form action="/attendance" method="post">
+        <p>{{ now()->format('Y年n月j日') }}</p>
+        <p>{{ now()->format('H:i') }}</p>
+        <form class="form" action="/attendance" method="post">
             @csrf
             <button type="submit">出勤</button>
         </form>

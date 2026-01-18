@@ -22,18 +22,14 @@ class AttendanceController extends Controller
     }
 
     //退勤打刻
-    public function clockOut()
-    {
-        Attendance::create([
-            'user_id'  => auth()->id(),
-            'date'     => Carbon::today(),
-            'clock_in' => Carbon::now()->format('H:i:s'),
-            'clock_out' => Carbon::now()->format('H:i:s'),
-            'note' => '',
-        ]);
+    //public function clockOut(Request $request)
+    //{
+        //$form = $request->all();
+        //unset($form['_token']);
+        //Attendance::find($request->user_id)->update($form);
 
-        return redirect('/attendance/list');
-    }
+        //return redirect('/attendance/list');
+    //}
 
     public function userList(){
         return view('attendance.list');
